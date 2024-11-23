@@ -1,1 +1,122 @@
-/* Start coding here */
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+.header {
+    background-color: #888;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.chat-container {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.message.left {
+    justify-content: flex-start;
+}
+
+.message.right {
+    justify-content: flex-end;
+}
+
+.bubble-left {
+    background-color: #888;
+    width: 150px;
+    min-height: 20px;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 15px;
+    max-width: 300px;
+    position: relative;
+    top: 180px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.bubble-right.green {
+  background-color: #28a745;
+  width: 150px;
+  min-height: 20px;
+  color: black;
+  border-radius: 25px;
+  padding: 10px 15px;
+  max-width: 300px;
+  position: relative;
+  bottom: 150px;
+  text-align: left;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.bubble-right.gray {
+    background-color: lightgray;
+    width: 150px;
+    min-height: 20px;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 15px;
+    max-width: 300px;
+    position: relative;
+    bottom: 150px;
+    text-align: left;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;  
+}
+
+.bubble-left:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    border: 10px solid transparent;
+    border-right-color: #888;
+    transform: translateY(-50%);
+}
+
+.bubble-right:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    border-left-color: #28a745;
+    transform: translateY(-50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #888;
+    border: none;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.emoji {
+    font-size: 20px;
+    margin: 0 5px;
+}
